@@ -17,7 +17,7 @@ $vmOutput = $VMs | ForEach-Object {
         "VM Data Disk Size" = ($_.StorageProfile.DataDisks.DiskSizeGB) -join ','
     }
 }
-$vmOutput | Export-Csv -Path .\newhddinfo2.csv -delimiter ";" -force -notypeinformation 
+$vmOutput | Export-Csv -Path .\newhddinfo.csv -delimiter ";" -force -notypeinformation 
 
 Get-AzDisk
 
